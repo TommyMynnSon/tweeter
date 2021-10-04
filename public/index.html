@@ -20,6 +20,10 @@
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
     rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -30,7 +34,14 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span>tweeter</span>
+    <div class="nav-section">
+      <span id="nav-logo">tweeter</span>
+    </div>
+
+    <div class="nav-section">
+      <span id="nav-write"><b>Write</b> a new tweet</span>
+      <i id="angle-double-down" class="fas fa-angle-double-down"></i>
+    </div>
   </nav>
 
   <!-- Page-specific (main) content here -->

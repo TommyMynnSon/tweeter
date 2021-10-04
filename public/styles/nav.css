@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-top: 2em;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-logo {
+  margin-left: 1.5em;
+}
+
+#nav-write {
+  margin-right: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;;
+}
+
+#angle-double-down {
+  margin-left: 3.5em;
+  color: red;
+}
+
+
+
+/* 7.355458333333334em */
