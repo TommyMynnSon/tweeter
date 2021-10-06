@@ -1,0 +1,95 @@
+article {
+  display: flex;
+  flex-direction: column;
+  border: solid 3px rgb(94, 94, 94);
+}
+
+article:hover {
+  box-shadow: 5px 5px;
+  color: #bdc9f5;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+article.tweet div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.tweeted-avatar {
+  margin-left: 0.3em;
+  margin-right: 0.2em;
+  color: rgb(94, 94, 94);
+}
+
+.tweeted-name {
+  color: rgb(94, 94, 94);
+}
+
+.tweeted-handle {
+  margin-right: 1em;
+  font-weight: bold;
+  color: #bdc9f5;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweeted-text {
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  background-color: #f4f1ec;
+  border-bottom: solid 3px rgb(94, 94, 94);
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0em;
+  padding-bottom: 1em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  color: rgb(94, 94, 94);
+}
+
+.tweeted-age {
+  font-size: 0.6em;
+  margin-left: 1em;
+  color: rgb(94, 94, 94);
+}
+
+.fa-flag {
+  color: rgb(94, 94, 94);
+}
+
+.fa-retweet {
+  margin-left: 0.5em;
+  color: rgb(94, 94, 94);
+}
+
+.fa-heart {
+  margin-right: 0.75em;
+  margin-left: 0.4em;
+  color: rgb(94, 94, 94);
+}
+
+.fa-flag:hover {
+  color: rgb(192, 160, 17);
+}
+
+.fa-retweet:hover {
+  color: rgb(192, 160, 17);
+}
+
+.fa-heart:hover {
+  color: rgb(192, 160, 17);
+}
