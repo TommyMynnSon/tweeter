@@ -17,6 +17,14 @@
   justify-content: space-between;
 }
 
+#tweet-text {
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: #f4f1ec;
+  border-bottom: solid 3px rgb(94, 94, 94);
+}
+
 .new-tweet {
   width: 100%;
 }
@@ -26,15 +34,7 @@
   color: rgb(94, 94, 94);
 }
 
-label {
+#new-tweet-question {
   font-weight: bold;
   color: rgb(94, 94, 94);
-}
-
-textarea {
-  border: none;
-  outline: none;
-  resize: none;
-  background-color: #f4f1ec;
-  border-bottom: solid 3px rgb(94, 94, 94);
 }

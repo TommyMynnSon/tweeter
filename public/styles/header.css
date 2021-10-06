@@ -9,11 +9,7 @@
   color: white;
 }
 
-.last-name {
-  font-weight: 100;
-}
-
-header {
+#main-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,4 +18,8 @@ header {
   height: 400px;
   background-color: rgb(255, 136, 0); 
   background-image: url('../../images/cubes.png');
+}
+
+.last-name {
+  font-weight: 100;
 }
