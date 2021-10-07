@@ -2,6 +2,7 @@ article {
   display: flex;
   flex-direction: column;
   border: solid 3px rgb(94, 94, 94);
+  margin-top: 1em;
 }
 
 article:hover {
@@ -12,12 +13,10 @@ article:hover {
 article.tweet header {
   display: flex;
   justify-content: space-between;
-  align-content: center;
 }
 
 article.tweet div {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 0.5em;
   margin-bottom: 1em;
@@ -49,6 +48,7 @@ article.tweet footer {
   border: none;
   outline: none;
   resize: none;
+  color: rgb(94, 94, 94);
   background-color: #f4f1ec;
   border-bottom: solid 3px rgb(94, 94, 94);
   width: 98%;
@@ -58,7 +58,6 @@ article.tweet footer {
   padding-bottom: 1.5em;
   padding-left: 0.7em;
   padding-right: 0.7em;
-  color: rgb(94, 94, 94);
 }
 
 .tweeted-age {
