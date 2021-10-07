@@ -63,10 +63,10 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form id="new-tweet-form" action="/tweets" method="POST">
+      <form id="new-tweet-form" name="tweet-text">
+        <div id="error-message" class="hidden"></div>
         <br>
         <label id="new-tweet-question" for="tweet-text">What are you humming about?</label>
-        <br>
         <textarea name="text" id="tweet-text"></textarea>
         <br>
         <div id="character-tracker">

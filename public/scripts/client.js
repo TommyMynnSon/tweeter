@@ -61,19 +61,37 @@ $(document).ready(() => {
   $("#new-tweet-form").on("submit", function(event) {
     event.preventDefault();
 
-    const tweetFormSerializedData = $(this).serialize();
+    const lengthOfTweet = $("#tweet-text").val().length;
 
-    $.ajax({
-      url: "/tweets",
-      type: "POST",
-      data: tweetFormSerializedData,
-      success: () => {
-        console.log(`ajax POST request to /tweets with data ${tweetFormSerializedData} successful.`);
-        loadTweets();
-      },
-      error: (error) => {
-        console.log(error);
-      }
-    })
+    if (lengthOfTweet === 0) {
+      $("#error-message").addClass("not-hidden").text("Too Short. Plz hum at least 1 char. #kthxbye.");
+      $("#error-message").prepend("<i class='fas fa-exclamation-triangle'></i>&nbsp&nbsp");
+      $("#error-message").append("&nbsp&nbsp<i class='fas fa-exclamation-triangle'></i>");
+    }
+
+    if (lengthOfTweet > 140) {
+      $("#error-message").addClass("not-hidden").text("Too Long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.");
+      $("#error-message").prepend("<i class='fas fa-exclamation-triangle'></i>&nbsp&nbsp");
+      $("#error-message").append("&nbsp&nbsp<i class='fas fa-exclamation-triangle'></i>");
+    }
+
+    if (lengthOfTweet > 0 && lengthOfTweet <= 140) {
+      const tweetFormSerializedData = $(this).serialize();
+
+      $.ajax({
+        url: "/tweets",
+        type: "POST",
+        data: tweetFormSerializedData,
+        success: () => {
+          $("#tweet-text").val('');
+          $(".counter").val(140);
+          $("#error-message").attr("class", "hidden").text("");
+          loadTweets();
+        },
+        error: (error) => {
+          console.log(error);
+        }
+      })
+    }
   });
 });

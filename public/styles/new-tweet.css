@@ -23,6 +23,7 @@
   resize: none;
   background-color: #f4f1ec;
   border-bottom: solid 3px rgb(94, 94, 94);
+  padding-top: 1.2em;
 }
 
 .new-tweet {
@@ -37,4 +38,14 @@
 #new-tweet-question {
   font-weight: bold;
   color: rgb(94, 94, 94);
+}
+
+.not-hidden {
+  color: red;
+  border-style: solid;
+  border-color: red;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
 }
