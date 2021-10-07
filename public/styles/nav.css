@@ -3,9 +3,6 @@
   font-family: 'Bungee', cursive, sans-serif;
 }
 
-#nav-write {
-  margin-right: 1.5em;
-}
 
 #angle-double-down {
   margin-left: 3.5em;
@@ -29,4 +26,19 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
+}
+
+#nav-write {
+  margin-right: 1.5em;
+}
+
+#write-new-tweet:hover > #angle-double-down {
+  animation: bounce 2s infinite;
+  position: relative;
+}
+
+@keyframes bounce {
+  from {top: 0em;}
+  50% {top: 0.3em;}
+  to {top: 0em;}
 }
