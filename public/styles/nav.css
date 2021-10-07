@@ -1,8 +1,9 @@
 #nav-logo {
   margin-left: 1.5em;
   font-family: 'Bungee', cursive, sans-serif;
+  position: fixed; 
+  top: 1.5em;
 }
-
 
 #angle-double-down {
   margin-left: 3.5em;
@@ -19,13 +20,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  background-color: #4056A1;
   color: #FFFFFF;
-  padding-top: 2em;
-  z-index: 9;
   width: 100%;
-  position: fixed;
-  top: 0;
+  position: absolute;
 }
 
 #nav-write {
@@ -41,4 +38,23 @@ nav {
   from {top: 0em;}
   50% {top: 0.3em;}
   to {top: 0em;}
+}
+
+.not-scrolled {
+  display: none;
+}
+
+.scrolled {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 99;
+  display:block;
+  height: 2.7em;
+  width: 2.7em;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }

@@ -13,6 +13,7 @@ article:hover {
 article.tweet header {
   display: flex;
   justify-content: space-between;
+  padding-top: 0.7em;
 }
 
 article.tweet div {
@@ -23,7 +24,7 @@ article.tweet div {
 }
 
 .tweeted-avatar {
-  margin-left: 0.3em;
+  margin-left: 0.7em;
   margin-right: 0.2em;
   color: rgb(94, 94, 94);
 }
