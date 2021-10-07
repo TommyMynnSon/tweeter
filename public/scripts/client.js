@@ -4,35 +4,29 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const tweets = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1633392708590
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1633479108590
-  }
-];
-
 $(document).ready(() => {
+  const loadTweets = () => {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      success: (tweets) => {
+        renderTweets(tweets);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  }
+
+  loadTweets();
+
   const renderTweets = function(tweets) {
+    const $tweetsContainer = $("#tweets-container");
+
+    $tweetsContainer.empty();
+
     for (const tweet of tweets) {
-      $("#tweets-container").append(createTweetElement(tweet));
+      $tweetsContainer.prepend(createTweetElement(tweet));
     }
   };
 
@@ -64,31 +58,22 @@ $(document).ready(() => {
     return $article;
   };
 
-  renderTweets(tweets);
-});
+  $("#new-tweet-form").on("submit", function(event) {
+    event.preventDefault();
 
-/* <article class="tweet">
-  <header>
-    <div>
-      <i class="far fa-kiss-beam fa-2x tweeted-avatar"></i>
-      <span class="tweeted-name">Tommy Son</span>
-    </div>
-    <div>
-      <span class="tweeted-handle">
-        @TommySon
-      </span>
-    </div>
-  </header>
-  <textarea disabled
-    class="tweeted-text">THERE ARE 140 CHARACTERS IN THIS TWEET. THERE ARE 100 CHARACTERS IN THIS TWEET. THERE ARE 100 CHARACTERS IN THIS TWEET. WEEEEEEEEEEEEEEEEEE.</textarea>
-  <footer>
-    <div>
-      <span class='tweeted-age'>10 days ago</span>
-    </div>
-    <div>
-      <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
-    </div>
-  </footer>
-</article> */
+    const tweetFormSerializedData = $(this).serialize();
+
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: tweetFormSerializedData,
+      success: () => {
+        console.log(`ajax POST request to /tweets with data ${tweetFormSerializedData} successful.`);
+        loadTweets();
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  });
+});
