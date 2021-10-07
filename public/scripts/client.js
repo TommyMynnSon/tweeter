@@ -94,4 +94,9 @@ $(document).ready(() => {
       })
     }
   });
+
+  $("#write-new-tweet").click(function() {
+    $("#new-tweet-form").slideToggle(200);
+    $("#tweet-text").focus();
+  });
 });
