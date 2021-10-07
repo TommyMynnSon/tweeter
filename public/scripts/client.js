@@ -99,4 +99,18 @@ $(document).ready(() => {
     $("#new-tweet-form").slideToggle(200);
     $("#tweet-text").focus();
   });
+
+  $("#go-top-button").click(function() {
+    $(window).scrollTop(0);
+    $("#new-tweet-form").toggle(true);
+    $("#tweet-text").focus();
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop()) {
+      $("#go-top-button").attr("class", "scrolled");
+    } else {
+      $("#go-top-button").attr("class", "not-scrolled");
+    }
+  });
 });
