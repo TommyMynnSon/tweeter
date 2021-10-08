@@ -1,11 +1,14 @@
+// Sass variables:
+@use "base";
+
 /*
 #tweet-button selects the button that is used to submit a new tweet.
 */
 #tweet-button {
-  font-family: Bungee, cursive, sans-serif;
-  background-color: #4056A1;
+  font-family: base.$font-stack-logo;
+  background-color: base.$blue-accent;
   border: none;
-  color: white;
+  color: base.$white;
 }
 
 /*
@@ -35,8 +38,8 @@ number that tracks the number of characters in a new tweet (initially 140).
   border: none;
   outline: none;
   resize: none;
-  background-color: #f4f1ec;
-  border-bottom: solid 3px #545149;
+  background-color: base.$general-background-color;
+  border-bottom: solid 3px base.$grey-accent;
   padding-top: 1.2em;
 }
 
@@ -44,8 +47,8 @@ number that tracks the number of characters in a new tweet (initially 140).
 #new-tweet-question selects the "What are you humming about?" text.
 */
 #new-tweet-question {
-  font-weight: bold;
-  color: #545149;
+  font-weight: base.$tweet-question-font-weight;
+  color: base.$grey-accent;
 }
 
 /*
@@ -60,17 +63,17 @@ the same as the #new-tweet-form selector, but .new-tweet is the parent.
 .counter selects the number that tracks the number of characters in a new tweet.
 */
 .counter {
-  font-family: Bungee, cursive, sans-serif;
-  color: #545149;
+  font-family: base.$font-stack-logo;
+  color: base.$grey-accent;
 }
 
 /*
 .not-hidden selects the error message upon submitting an invalid tweet.
 */
 .not-hidden {
-  color: red;
+  color: base.$red;
   border-style: solid;
-  border-color: red;
+  border-color: base.$red;
   padding-left: 0.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;

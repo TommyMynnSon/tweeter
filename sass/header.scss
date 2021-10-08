@@ -1,3 +1,6 @@
+ // Sass variables:
+ @use "base";
+
 /*
  * #profile-image selects the hexagon.
  */
@@ -12,7 +15,7 @@
 #profile-name selects the text (name) underneath the hexagon.
 */
 #profile-name {
-  color: white;
+  color: base.$white;
 }
 
 /*
@@ -21,18 +24,17 @@ through media queries).
 */
 #main-header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include base.xy-align;
   align-items: center;
   padding-top: 4em;
   height: 400px;
-  background-color: #E09D08;
-  background-image: url("../../images/old-map.png");
+  background-color: base.$header-background-color; 
+  background-image: url('../../images/old-map.png');
 }
 
 /*
 .last-name selects the last name underneath the hexagon.
 */
 .last-name {
-  font-weight: 100;
+  font-weight: base.$header-last-name-font-weight;
 }

@@ -1,0 +1,34 @@
+// Fonts & Specifics
+$font-stack-general: Source Sans Pro, sans-serif;
+$font-stack-logo: Bungee, cursive, sans-serif;
+
+$header-last-name-font-weight: 100;
+$tweet-question-font-weight: bold;
+$handle-font-weight: bold;
+
+// Colors & Specifics
+$blue-accent: #4056A1;
+$grey-accent: #545149;
+$tweeted-container-accent: #bdc9f5;
+
+$red: red;
+$white: white;
+
+$general-background-color: #f4f1ec;
+$header-background-color: #E09D08;
+
+$icon-hover-color: rgb(192, 160, 17);
+
+// Mixins
+@mixin logo() {
+  font-family: $font-stack-logo;
+  position: fixed; 
+  margin-left: 1.5em;
+  top: 1.5em;
+  text-shadow: -1px -1px $blue-accent, 1px -1px $blue-accent, -1px 1px $blue-accent, 1px 1px $blue-accent;
+}
+
+@mixin xy-align() {
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,3 +1,6 @@
+// Sass variables:
+@use "base";
+
 /*
 Desktop display media query.
 */
@@ -19,7 +22,7 @@ Desktop display media query.
   text, and the double down arrow icon.
   */
   nav {
-    background-color: #4056A1;
+    background-color: base.$blue-accent;
   }
 
   /*

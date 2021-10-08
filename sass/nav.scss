@@ -1,12 +1,11 @@
+ // Sass variables:
+@use "base";
+
 /*
 #nav-logo selects the TWEETER logo located on the top left of the web page.
 */
 #nav-logo {
-  font-family: Bungee, cursive, sans-serif;
-  position: fixed;
-  margin-left: 1.5em;
-  top: 1.5em;
-  text-shadow: -1px -1px #4056A1, 1px -1px #4056A1, -1px 1px #4056A1, 1px 1px #4056A1;
+  @include base.logo;
 }
 
 /*
@@ -23,7 +22,7 @@ the web page.
 */
 #angle-double-down {
   margin-left: 3.5em;
-  color: red;
+  color: base.$red;
 }
 
 /*
@@ -36,16 +35,11 @@ the double down arrow icon when the div its in is hovered on.
 }
 
 @keyframes bounce {
-  from {
-    top: 0em;
-  }
-  50% {
-    top: 0.3em;
-  }
-  to {
-    top: 0em;
-  }
+  from {top: 0em;}
+  50% {top: 0.3em;}
+  to {top: 0em;}
 }
+
 /*
 .nav-section selects the container (div) the TWEETER logo is in
 and the container (div) the text "Write a new tweet" and its 
@@ -75,8 +69,8 @@ has scrolled down the web page via jQuery.
   width: 2.7em;
   border-radius: 50%;
   border: none;
-  background-color: red;
-  color: white;
+  background-color: base.$red;
+  color: base.$white;
   cursor: pointer;
 }
 
@@ -89,7 +83,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  color: white;
+  color: base.$white;
   width: 100%;
   position: absolute;
 }

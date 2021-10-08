@@ -1,10 +1,13 @@
+// Sass variables:
+@use "base";
+
 /*
 article selects all the tweets that have been posted.
 */
 article {
   display: flex;
   flex-direction: column;
-  border: solid 3px #545149;
+  border: solid 3px base.$grey-accent;
   margin-top: 1em;
 }
 
@@ -13,7 +16,7 @@ article:hover attaches the following styling on all the tweets that have been po
 */
 article:hover {
   box-shadow: 5px 5px;
-  color: #bdc9f5;
+  color: base.$tweeted-container-accent;
 }
 
 /*
@@ -52,14 +55,14 @@ article.tweet div {
 .tweeted-avatar {
   margin-left: 0.7em;
   margin-right: 0.2em;
-  color: #545149;
+  color: base.$grey-accent;
 }
 
 /*
 .tweeted-name selects the name beside the face avatar of all the tweets that have been posted.
 */
 .tweeted-name {
-  color: #545149;
+  color: base.$grey-accent;
 }
 
 /*
@@ -67,8 +70,8 @@ article.tweet div {
 */
 .tweeted-handle {
   margin-right: 1em;
-  font-weight: bold;
-  color: #bdc9f5;
+  font-weight: base.$handle-font-weight;
+  color: base.$tweeted-container-accent;
 }
 
 /*
@@ -80,9 +83,9 @@ tweets that have been posted.
   border: none;
   outline: none;
   resize: none;
-  color: #545149;
-  background-color: #f4f1ec;
-  border-bottom: solid 3px #545149;
+  color: base.$grey-accent;
+  background-color: base.$general-background-color;
+  border-bottom: solid 3px base.$grey-accent;
   width: 98%;
   margin-left: auto;
   margin-right: auto;
@@ -98,7 +101,7 @@ tweets that have been posted.
 .tweeted-age {
   font-size: 0.6em;
   margin-left: 1em;
-  color: #545149;
+  color: base.$grey-accent;
 }
 
 /*
@@ -107,28 +110,28 @@ tweets that have been posted (and attaches the same color styling when
 hovered over each of them).
 */
 .fa-flag {
-  color: #4056A1;
+  color: base.$blue-accent;
 }
 
 .fa-retweet {
   margin-left: 0.5em;
-  color: #4056A1;
+  color: base.$blue-accent;
 }
 
 .fa-heart {
   margin-right: 0.75em;
   margin-left: 0.4em;
-  color: #4056A1;
+  color: base.$blue-accent;
 }
 
 .fa-flag:hover {
-  color: #c0a011;
+  color: base.$icon-hover-color;
 }
 
 .fa-retweet:hover {
-  color: #c0a011;
+  color: base.$icon-hover-color;
 }
 
 .fa-heart:hover {
-  color: #c0a011;
+  color: base.$icon-hover-color;
 }

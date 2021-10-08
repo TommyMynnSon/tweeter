@@ -1,12 +1,15 @@
+ // Sass variables:
+ @use "base";
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,27 +17,30 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: base.$grey-accent;
+  background-color: base.$general-background-color;
   font-size: 24px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-/*
-Setting up the web page:
-- All text in body and nav should be of font 'Source Sans Pro' or default 'sans-serif'.
-- The TWEETER logo in the nav is excluded from the rule above.
-- main should be centered in the web page and its width equal to 90% of the viewport.
-*/
+
+ /*
+ Setting up the web page:
+ - All text in body and nav should be of font 'Source Sans Pro' or default 'sans-serif'.
+ - The TWEETER logo in the nav is excluded from the rule above.
+ - main should be centered in the web page and its width equal to 90% of the viewport.
+ */
+
 body {
-  font-family: Source Sans Pro, sans-serif;
+  font-family: base.$font-stack-general;
 }
 
 nav {
-  font-family: Source Sans Pro, sans-serif;
+  font-family: base.$font-stack-general;
 }
 
 main {
@@ -42,5 +48,5 @@ main {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  width: 90%;
+  width: 90%; 
 }
