@@ -1,34 +1,35 @@
+/*
+#nav-logo selects the TWEETER logo located on the top left of the web page.
+*/
 #nav-logo {
-  margin-left: 1.5em;
+  text-shadow: -1px -1px #4056A1, 1px -1px #4056A1, -1px 1px #4056A1, 1px 1px #4056A1;
   font-family: 'Bungee', cursive, sans-serif;
   position: fixed; 
+  margin-left: 1.5em;
   top: 1.5em;
 }
 
+/*
+#nav-write selects the "Write a new tweet" text located on the top right of 
+the web page.
+*/
+#nav-write {
+  margin-right: 1.5em;
+}
+
+/*
+#angle-double-down selects the double down arrow icon underneath the
+"Write a new tweet" text located on the top right of the web page.
+*/
 #angle-double-down {
   margin-left: 3.5em;
   color: red;
 }
 
-.nav-section {
-  display: flex;
-  flex-direction: column;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 120px;
-  color: #FFFFFF;
-  width: 100%;
-  position: absolute;
-}
-
-#nav-write {
-  margin-right: 1.5em;
-}
-
+/*
+#write-new-tweet:hover > #angle-double-down applies an animation to
+the double down arrow icon when the div its in is hovered on.
+*/
 #write-new-tweet:hover > #angle-double-down {
   animation: bounce 2s infinite;
   position: relative;
@@ -40,6 +41,23 @@ nav {
   to {top: 0em;}
 }
 
+/*
+.nav-section selects the container (div) the TWEETER logo is in
+and the container (div) the text "Write a new tweet" and its 
+double down arrow icon is in.
+*/
+.nav-section {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+.not-scrolled and .scrolled are applied to the circular red button that
+scrolls to the top of the page. They are applied in a toggle-type
+kind of way so that the circular red button appears when the user
+has scrolled down the web page via jQuery.
+*/
 .not-scrolled {
   display: none;
 }
@@ -57,4 +75,18 @@ nav {
   background-color: red;
   color: white;
   cursor: pointer;
+}
+
+/*
+nav selects the nav element which contains the TWEETER logo, "Write a new tweet"
+text, and the double down arrow icon.
+*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  color: #FFFFFF;
+  width: 100%;
+  position: absolute;
 }

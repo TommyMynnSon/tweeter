@@ -1,3 +1,6 @@
+/*
+ * #profile-image selects the hexagon.
+ */
 #profile-image {
   max-width: 80%;
   margin-left: auto;
@@ -5,10 +8,17 @@
   display: block;
 }
 
+/*
+#profile-name selects the text (name) underneath the hexagon.
+*/
 #profile-name {
   color: white;
 }
 
+/*
+#main-header selects the portion of the web page that is orange (including when it gets manipulated
+through media queries).
+*/
 #main-header {
   display: flex;
   flex-direction: column;
@@ -20,6 +30,9 @@
   background-image: url('../../images/old-map.png');
 }
 
+/*
+.last-name selects the last name underneath the hexagon.
+*/
 .last-name {
   font-weight: 100;
 }

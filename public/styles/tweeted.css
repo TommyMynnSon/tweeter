@@ -1,3 +1,6 @@
+/*
+article selects all the tweets that have been posted.
+*/
 article {
   display: flex;
   flex-direction: column;
@@ -5,17 +8,37 @@ article {
   margin-top: 1em;
 }
 
+/*
+article:hover attaches the following styling on all the tweets that have been posted.
+*/
 article:hover {
   box-shadow: 5px 5px;
   color: #bdc9f5;
 }
 
+/*
+article.tweet header selects the top portion of all the tweets that have been posted
+(e.g., the horizontal area that contains the face avatar, name, and @handle).
+*/
 article.tweet header {
   display: flex;
   justify-content: space-between;
   padding-top: 0.7em;
 }
 
+/*
+article.tweet header selects the bottom portion of all the tweets that have been posted
+(e.g., the horizontal area that contains the age of the tweet and the flag, reshare, and heart icons).
+*/
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+article.tweet div selects all its nested div elements (specifically, div elements containing
+the face avatar & name, @handle, age of the tweet, and the icons on the bottom right of a tweet).
+*/
 article.tweet div {
   display: flex;
   align-items: center;
@@ -23,29 +46,37 @@ article.tweet div {
   margin-bottom: 1em;
 }
 
+/*
+.tweeted-avatar selects the face avatar of all the tweets that have been posted.
+*/
 .tweeted-avatar {
   margin-left: 0.7em;
   margin-right: 0.2em;
   color: rgb(94, 94, 94);
 }
 
+/*
+.tweeted-name selects the name beside the face avatar of all the tweets that have been posted.
+*/
 .tweeted-name {
   color: rgb(94, 94, 94);
 }
 
+/*
+.tweeted-handle selects the @handle of all the tweets that have been posted.
+*/
 .tweeted-handle {
   margin-right: 1em;
   font-weight: bold;
   color: #bdc9f5;
 }
 
-article.tweet footer {
-  display: flex;
-  justify-content: space-between;
-}
-
+/*
+.tweeted-text selects the textarea element (which includes the actual tweet) of all the
+tweets that have been posted.
+*/
 .tweeted-text {
-  overflow: hidden;
+  overflow: auto;
   border: none;
   outline: none;
   resize: none;
@@ -61,12 +92,20 @@ article.tweet footer {
   padding-right: 0.7em;
 }
 
+/*
+.tweeted-age selects the age of the tweet of all the tweets that have been posted.
+*/
 .tweeted-age {
   font-size: 0.6em;
   margin-left: 1em;
   color: rgb(94, 94, 94);
 }
 
+/*
+The selectors below select the flag, reshare, and heart icons of all the 
+tweets that have been posted (and attaches the same color styling when
+hovered over each of them).
+*/
 .fa-flag {
   color: #4056A1;
 }

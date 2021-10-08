@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -15,6 +16,10 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweeted.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/responsive-design.css" type="text/css" />
+
+  <!-- Responsive Design -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +76,7 @@
         <br>
         <div id="character-tracker">
           <button id="tweet-button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output class="counter">140</output>
         </div>
       </form>
     </section>
@@ -80,6 +85,7 @@
     </section>
     <br>
   </main>
+
   <button id="go-top-button"><i class="fas fa-angle-double-up"></i></button>
 </body>
 

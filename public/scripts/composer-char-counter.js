@@ -1,6 +1,6 @@
+// Updates the character count via jQuery
+// as a user is forming a new tweet.
 $(document).ready(function() {
-  console.log('document is ready for jQuery.');
-
   $('#tweet-text').on('input', function() {
     const numberOfCharacters = $('#' + this.id).val().length;
     const parentNode = $(this).parents().get(0);

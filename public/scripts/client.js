@@ -5,6 +5,8 @@
  */
 
 $(document).ready(() => {
+  // AJAX request to retrieve tweets from database
+  // and on success to render them on the web page.
   const loadTweets = () => {
     $.ajax({
       url: "/tweets",
@@ -18,8 +20,11 @@ $(document).ready(() => {
     })
   }
 
+  // Initial rendering of tweets in the database.
   loadTweets();
 
+  // Adds tweets from the database to the html container
+  // that displays them.
   const renderTweets = function(tweets) {
     const $tweetsContainer = $("#tweets-container");
 
@@ -30,6 +35,8 @@ $(document).ready(() => {
     }
   };
 
+  // Create an article element for each tweet and its specifics (age, user, handle, content)
+  // given tweets from the databse in JSON format.
   const createTweetElement = function(tweet) {
     // Construct <header> within <article>
     const $avatar = $("<img>").addClass("tweeted-avatar").attr("src", tweet.user.avatars);
@@ -58,6 +65,7 @@ $(document).ready(() => {
     return $article;
   };
 
+  // Handler for when a user wants to submit a new tweet.
   $("#new-tweet-form").on("submit", function(event) {
     event.preventDefault();
 
@@ -95,17 +103,24 @@ $(document).ready(() => {
     }
   });
 
+  // Handler for when a user clicks the area around the
+  // "Write a new tweet" text.
   $("#write-new-tweet").click(function() {
     $("#new-tweet-form").slideToggle(200);
     $("#tweet-text").focus();
   });
 
+  // Handler for when a user clicks the red circular button
+  // that appears when scrolling down.
   $("#go-top-button").click(function() {
     $(window).scrollTop(0);
     $("#new-tweet-form").toggle(true);
     $("#tweet-text").focus();
   });
 
+  // Handler for when a user scrolls down the web page.
+  // When scrolled down the web page a certain amount,
+  // allows the go-to-top button to appear.
   $(window).scroll(function() {
     if ($(this).scrollTop()) {
       $("#go-top-button").attr("class", "scrolled");

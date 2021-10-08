@@ -1,3 +1,6 @@
+/*
+#tweet-button selects the button that is used to submit a new tweet.
+*/
 #tweet-button {
   font-family: 'Bungee', cursive, sans-serif;
   background-color: #4056A1;
@@ -5,18 +8,29 @@
   color: white;
 }
 
+/*
+#new-tweet-form selects the area in which you write a new tweet,
+contains the "TWEET" button, and the counter of characters.
+*/
 #new-tweet-form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+/*
+#character-tracker selects the container which contains the
+number that tracks the number of characters in a new tweet (initially 140).
+*/
 #character-tracker {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/*
+#tweet-text selects the area where you type out your new tweet.
+*/
 #tweet-text {
   border: none;
   outline: none;
@@ -26,20 +40,33 @@
   padding-top: 1.2em;
 }
 
-.new-tweet {
-  width: 100%;
-}
-
-.counter {
-  font-family: 'Bungee', cursive, sans-serif;
-  color: rgb(94, 94, 94);
-}
-
+/*
+#new-tweet-question selects the "What are you humming about?" text.
+*/
 #new-tweet-question {
   font-weight: bold;
   color: rgb(94, 94, 94);
 }
 
+/*
+.new-tweet selects the area in which you submit a new tweet. Essentially
+the same as the #new-tweet-form selector, but .new-tweet is the parent.
+*/
+.new-tweet {
+  width: 100%;
+}
+
+/*
+.counter selects the number that tracks the number of characters in a new tweet.
+*/
+.counter {
+  font-family: 'Bungee', cursive, sans-serif;
+  color: rgb(94, 94, 94);
+}
+
+/*
+.not-hidden selects the error message upon submitting an invalid tweet.
+*/
 .not-hidden {
   color: red;
   border-style: solid;
