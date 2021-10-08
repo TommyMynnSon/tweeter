@@ -1,8 +1,23 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone made from the front end technologies of HTML, CSS, JS, jQuery and AJAX & the back end technologies of Node and Express.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Screenshots
+
+Mobile view of the app.
+!["Mobile view of the app."](https://github.com/TommyMynnSon/tweeter/blob/master/docs/mobile.png)
+
+
+Desktop view of the app.
+!["Desktop view of the app."](https://github.com/TommyMynnSon/tweeter/blob/master/docs/desktop.png)
+
+
+Error handling of a tweet submission with an empty body.
+!["Error-handling"](https://github.com/TommyMynnSon/tweeter/blob/master/docs/error_empty.png)
+
+
+Error handling of a tweet submission over the character limit.
+![""](https://github.com/TommyMynnSon/tweeter/blob/master/docs/error_overflow.png)
 
 ## Getting Started
 
